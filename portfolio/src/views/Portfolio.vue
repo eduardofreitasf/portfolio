@@ -124,29 +124,61 @@
         <!-- Contact -->
         <SectionWrapper id="contact">
             <h2>Contact</h2>
-            <p>
-                Personal Email:
-                <a href="mailto:ef05238@gmail.com" class="contact-link">
-                    ef05238@gmail.com
-                </a>
-            </p>
 
-            <p>
-                Academic Email:
-                <a href="mailto:a106010@alunos.uminho.pt" class="contact-link">
-                    a106010@alunos.uminho.pt
-                </a>
-            </p>
+            <div class="contact-grid">
+                <!-- Personal Email -->
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 13 20 4.01V4H4zm0 16h16V8l-8 7-8-7v12z"
+                        />
+                    </svg>
+                    <div>
+                        <p class="contact-label">Personal Email</p>
+                        <a href="mailto:ef05238@gmail.com" class="contact-link">
+                            ef05238@gmail.com
+                        </a>
+                    </div>
+                </div>
 
-            <p>
-                Linkedin:
-                <a
-                    href="https://www.linkedin.com/in/eduardoffernandes/"
-                    class="contact-link"
-                >
-                    eduardoffernandes
-                </a>
-            </p>
+                <!-- Academic Email -->
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 13 20 4.01V4H4zm0 16h16V8l-8 7-8-7v12z"
+                        />
+                    </svg>
+                    <div>
+                        <p class="contact-label">Academic Email</p>
+                        <a
+                            href="mailto:a106010@alunos.uminho.pt"
+                            class="contact-link"
+                        >
+                            a106010@alunos.uminho.pt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM7.5 7h4.78v2.32h.07c.67-1.27 2.3-2.6 4.74-2.6 5.07 0 6 3.34 6 7.68V24h-5v-8.25c0-1.97-.04-4.5-2.74-4.5-2.75 0-3.17 2.15-3.17 4.37V24h-5V7z"
+                        />
+                    </svg>
+                    <div>
+                        <p class="contact-label">LinkedIn</p>
+                        <a
+                            href="https://www.linkedin.com/in/eduardoffernandes/"
+                            target="_blank"
+                            rel="noopener"
+                            class="contact-link"
+                        >
+                            eduardoffernandes
+                        </a>
+                    </div>
+                </div>
+            </div>
         </SectionWrapper>
     </main>
 </template>
@@ -290,5 +322,55 @@ h2 {
 
 .tooltip-wrapper:hover .tooltip {
     opacity: 1;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    flex: 1 1 280px; /* responsive */
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    width: 36px;
+    height: 36px;
+    fill: #42b883; /* accent color */
+    flex-shrink: 0;
+}
+
+.contact-label {
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+}
+
+.contact-link {
+    color: #222;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #42b883;
+    text-decoration: underline;
 }
 </style>
