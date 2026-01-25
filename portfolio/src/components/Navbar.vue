@@ -7,7 +7,13 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contacts</a></li>
             <li>
-                <a href="/cv.pdf" class="cv-btn" download>CV</a>
+                <a
+                    href="/portfolio/cv.pdf"
+                    class="cv-btn"
+                    target="_blank"
+                    rel="noopener"
+                    >CV</a
+                >
             </li>
         </ul>
     </nav>
