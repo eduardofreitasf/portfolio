@@ -13,10 +13,11 @@ jobs:
 
       - name: Install and Build
         run: |
+          cd portfolio
           npm install
           npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder Vue builds into
+          folder: portfolio/dist # The folder Vue builds into
