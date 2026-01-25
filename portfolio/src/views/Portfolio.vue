@@ -1,125 +1,161 @@
 <template>
-    <div class="portfolio">
-        <!-- Hero Section -->
-        <section id="home" class="section hero">
-            <h1>Eduardo Freitas Fernandes</h1>
-            <h2>Software Developer</h2>
-            <p>
-                I build modern web applications and enjoy turning ideas into
-                reality.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="/cv.pdf" class="btn secondary" download>Download CV</a>
-            </div>
-        </section>
+    <Navbar />
 
-        <!-- About Me -->
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                I'm a developer with a passion for building clean, efficient,
-                and user-friendly applications. I enjoy learning new
-                technologies and solving real-world problems through code.
-            </p>
-            <p>
-                Currently, I'm focused on improving my skills in full-stack
-                development and software architecture.
-            </p>
-        </section>
+    <main class="content">
+        <!-- Hero -->
+        <SectionWrapper id="home">
+            <div class="hero">
+                <h1>Eduardo Freitas Fernandes</h1>
+                <h2>Software Developer</h2>
+                <p>
+                    Software Engineering Student focused on systems, algorithms,
+                    and performance
+                </p>
 
-        <!-- Projects -->
-        <section id="projects" class="section">
-            <h2>Projects</h2>
+                <div class="hero-links">
+                    <a
+                        href="https://www.linkedin.com/in/eduardoffernandes/"
+                        target="_blank"
+                        rel="noopener"
+                        class="icon-link"
+                        aria-label="LinkedIn"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM7.5 7h4.78v2.32h.07c.67-1.27 2.3-2.6 4.74-2.6 5.07 0 6 3.34 6 7.68V24h-5v-8.25c0-1.97-.04-4.5-2.74-4.5-2.75 0-3.17 2.15-3.17 4.37V24h-5V7z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        href="https://github.com/eduardofreitasf"
+                        target="_blank"
+                        rel="noopener"
+                        class="icon-link"
+                        aria-label="GitHub"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.02c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.77 1.06.77 2.14v3.17c0 .31.21.66.79.55A10.99 10.99 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"
+                            />
+                        </svg>
+                    </a>
 
-            <div class="projects-grid">
-                <div
-                    v-for="project in projects"
-                    :key="project.id"
-                    class="project-card"
-                >
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
-                    <p class="tech">
-                        <strong>Tech:</strong> {{ project.tech.join(", ") }}
-                    </p>
-                    <div class="links">
-                        <a :href="project.github" target="_blank">GitHub</a>
+                    <div class="tooltip-wrapper">
                         <a
-                            v-if="project.demo"
-                            :href="project.demo"
+                            href="https://github.com/eduardo106919"
                             target="_blank"
-                            >Live Demo</a
+                            rel="noopener"
+                            class="icon-link"
+                            aria-label="Academic GitHub"
                         >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.02c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.77 1.06.77 2.14v3.17c0 .31.21.66.79.55A10.99 10.99 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"
+                                />
+                            </svg>
+                        </a>
+
+                        <span class="tooltip">
+                            Academic projects, coursework, and university work
+                        </span>
                     </div>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
+
+        <!-- About -->
+        <SectionWrapper id="about">
+            <h2>About Me</h2>
+            <p>
+                My name is <strong>Eduardo Freitas Fernandes</strong>, and I am
+                a Software Engineering student at Universidade do Minho with a
+                strong interest in both high-level abstractions and low-level
+                systems. I enjoy learning new technologies and solving
+                meaningful problems.
+            </p>
+
+            <p>
+                I enjoy working at the intersection of elegant algorithms and
+                system-level performance, aiming to understand not just how
+                software works, but how it behaves close to the hardware.
+            </p>
+
+            <ul class="about-list">
+                <li>
+                    <strong>Low-Level Systems:</strong> Deep interest in Linux
+                    internals, operating systems, and C programming.
+                </li>
+                <li>
+                    <strong>Algorithms & Data Structures:</strong> Passionate
+                    about functional programming (Haskell), advanced data
+                    structures, and algorithmic complexity analysis.
+                </li>
+                <li>
+                    <strong>Security & Networking:</strong> Exploring network
+                    security concepts and the fundamentals of digital
+                    communication.
+                </li>
+            </ul>
+        </SectionWrapper>
+
+        <!-- Projects -->
+        <SectionWrapper id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <ProjectCard v-for="p in projects" :key="p.id" :project="p" />
+            </div>
+        </SectionWrapper>
 
         <!-- Education -->
-        <section id="education" class="section">
+        <SectionWrapper id="education">
             <h2>Education</h2>
-
-            <div class="education-item">
-                <h3>Bachelor's degree in Computer Engineering</h3>
-                <p>Universiade do Minho</p>
-                <span>2023 - On Going</span>
-            </div>
-        </section>
-
-        <!-- Extras -->
-        <section id="extras" class="section extras">
-            <h2>Extras</h2>
-
-            <div class="extras-grid">
-                <div class="extra-card">
-                    <h3>CV</h3>
-                    <p>Download a full copy of my resume.</p>
-                    <a href="/cv.pdf" download class="btn small">Download</a>
-                </div>
-
-                <div class="extra-card">
-                    <h3>Skills</h3>
-                    <ul>
-                        <li>Git, Github, Linux</li>
-                        <li>C, Haskell, Java, Python</li>
-                        <li>HTML, CSS, JavaScript, Vue</li>
-                        <li>UML</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <p>
+                <strong
+                    >Secondary Education: Science and Technology Program</strong
+                ><br />
+                Escola Secundária Francisco de Holanda - 2020-2023
+            </p>
+            <p>
+                <strong>Bachelor's degree in Computer Engineering</strong><br />
+                Universidade do Minho - 2023-on going
+            </p>
+        </SectionWrapper>
 
         <!-- Contact -->
-        <section id="contact" class="section contact">
+        <SectionWrapper id="contact">
             <h2>Contact</h2>
             <p>
-                Feel free to reach out if you'd like to collaborate or just say
-                hi.
+                Personal Email:
+                <a href="mailto:ef05238@gmail.com" class="contact-link">
+                    ef05238@gmail.com
+                </a>
             </p>
-            <a href="mailto:ef05238@gmail.com" class="btn primary">
-                ef05238@gmail.com
-            </a>
-        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2026 Eduardo Freitas Fernandes</p>
-            <div class="socials">
-                <a href="https://github.com/eduardofreitasf" target="_blank"
-                    >GitHub</a
-                >
+            <p>
+                Academic Email:
+                <a href="mailto:a106010@alunos.uminho.pt" class="contact-link">
+                    a106010@alunos.uminho.pt
+                </a>
+            </p>
+
+            <p>
+                Linkedin:
                 <a
-                    href="https://www.linkedin.com/in/eduardoffernandes"
-                    target="_blank"
-                    >LinkedIn</a
+                    href="https://www.linkedin.com/in/eduardoffernandes/"
+                    class="contact-link"
                 >
-            </div>
-        </footer>
-    </div>
+                    eduardoffernandes
+                </a>
+            </p>
+        </SectionWrapper>
+    </main>
 </template>
 
 <script setup>
+import Navbar from "../components/Navbar.vue";
+import SectionWrapper from "../components/SectionWrapper.vue";
+import ProjectCard from "../components/ProjectCard.vue";
+
 const projects = [
     {
         id: 1,
@@ -146,74 +182,113 @@ const projects = [
 </script>
 
 <style scoped>
-.portfolio {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-.section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: auto;
+.content {
+    padding-top: 80px;
 }
 
 .hero {
     text-align: center;
-    padding-top: 6rem;
+    padding: 6rem 1rem;
 }
 
-.hero h1 {
+h1 {
     font-size: 3rem;
 }
 
-.hero-actions {
-    margin-top: 2rem;
+h2 {
+    margin-bottom: 1rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    margin-right: 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-.primary {
-    background: #42b883;
-    color: white;
-}
-
-.secondary {
-    border: 1px solid #42b883;
-    color: #42b883;
-}
-
-.projects-grid,
-.extras-grid {
+.grid {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.project-card,
-.extra-card {
-    border: 1px solid #ddd;
-    padding: 1.5rem;
-    border-radius: 6px;
+.contact-link {
+    color: #42b883;
+    font-size: 1.1rem;
 }
 
-.tech {
-    font-size: 0.9rem;
-    color: #555;
+.about-list {
+    margin-top: 1.5rem;
+    padding-left: 1.2rem;
 }
 
-.footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #eee;
+.about-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
 }
 
-.socials a {
-    margin: 0 0.5rem;
+.hero-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero-links a {
+    color: #42b883;
+    text-decoration: none;
+    font-weight: 500;
+
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-links a:hover {
+    text-decoration: underline;
+}
+
+/* Icon links */
+.icon-link {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    transition:
+        transform 0.25s ease,
+        color 0.25s easesvg;
+}
+
+.icon-link svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+/* Hover animation */
+.icon-link:hover {
+    color: #42b883;
+    transform: translateY(-4px);
+}
+
+/* Tooltip */
+.tooltip-wrapper {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.tooltip-wrapper:hover .tooltip {
+    opacity: 1;
 }
 </style>

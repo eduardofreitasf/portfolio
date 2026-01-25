@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #f5f5f7;
+    color: #222;
+}
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 2rem;
+    background-color: #ffffff; /* section cards remain white */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* subtle shadow for depth */
+    margin-bottom: 2rem;
+}
+.navbar {
+    background-color: #eaeaea; /* light gray navbar */
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
