@@ -162,7 +162,7 @@
                     <div>
                         <p class="contact-label">Academic Email</p>
                         <a
-                            href="mailto:a106010@alunos.uminho.pt"
+                            href="mailto:a106919@alunos.uminho.pt"
                             class="contact-link"
                         >
                             a106010@alunos.uminho.pt
@@ -237,7 +237,7 @@ const projects = [
     {
         id: 3,
         title: "Data Structures",
-        description: "Implementation of multiple data structures",
+        description: "Implementation of multiple data structures.",
         tech: ["C"],
         github: "https://github.com/eduardofreitasf/data_structures",
     },
