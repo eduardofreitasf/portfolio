@@ -165,7 +165,7 @@
                             href="mailto:a106919@alunos.uminho.pt"
                             class="contact-link"
                         >
-                            a106010@alunos.uminho.pt
+                            a106919@alunos.uminho.pt
                         </a>
                     </div>
                 </div>
