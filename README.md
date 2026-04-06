@@ -16,19 +16,3 @@ The goal of this project is to present who I am, my background in Software Engin
 - Clean, light theme with subtle contrast
 - Built with modern frontend tooling
 
-## 📁 Project Structure
-
-```text
-src/
- ├─ components/
- │   ├─ Navbar.vue
- │   ├─ SectionWrapper.vue
- │   ├─ ProjectCard.vue
- │   └─ ...
- ├─ views/
- │   └─ Portfolio.vue
- ├─ App.vue
- └─ main.js
-public/
- ├─ cv.pdf
- └─ assets/
