@@ -17,7 +17,7 @@
                     href="/portfolio/cv.pdf"
                     class="cv-btn"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     @click="isOpen = false"
                     >CV</a
                 >

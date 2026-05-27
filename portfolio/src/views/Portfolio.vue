@@ -17,7 +17,7 @@
                         <a
                             href="https://www.linkedin.com/in/eduardoffernandes/"
                             target="_blank"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                             class="icon-link"
                             aria-label="LinkedIn"
                         >
@@ -30,7 +30,7 @@
                         <a
                             href="https://github.com/eduardofreitasf"
                             target="_blank"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                             class="icon-link"
                             aria-label="GitHub"
                         >
@@ -45,7 +45,7 @@
                             <a
                                 href="https://github.com/eduardo106919"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
                                 class="icon-link"
                                 aria-label="Academic GitHub"
                             >
@@ -182,7 +182,7 @@
                         <a
                             href="https://www.linkedin.com/in/eduardoffernandes/"
                             target="_blank"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                             class="contact-link"
                         >
                             eduardoffernandes
@@ -202,7 +202,7 @@
                         <a
                             href="https://www.instagram.com/edufreitas114"
                             target="_blank"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                             class="contact-link"
                         >
                             edufreitas114
