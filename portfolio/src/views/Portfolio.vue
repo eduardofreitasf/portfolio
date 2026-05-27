@@ -247,6 +247,10 @@ const projects = [
 <style scoped>
 .content {
     padding-top: 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .hero {
@@ -440,5 +444,48 @@ h2 {
 .contact-link:hover {
     color: #42b883;
     text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+
+    .hero-text p {
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-links {
+        justify-content: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex: 1 1 auto;
+    }
 }
 </style>
