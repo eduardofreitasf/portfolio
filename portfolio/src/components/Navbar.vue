@@ -9,6 +9,7 @@
         </button>
         <ul class="nav-links" :class="{ 'is-open': isOpen }">
             <li><a href="#about" @click="isOpen = false">About</a></li>
+            <li><a href="#experience" @click="isOpen = false">Experience</a></li>
             <li><a href="#projects" @click="isOpen = false">Projects</a></li>
             <li><a href="#skills" @click="isOpen = false">Skills</a></li>
             <li><a href="#education" @click="isOpen = false">Education</a></li>

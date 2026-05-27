@@ -110,6 +110,31 @@
             </ul>
         </SectionWrapper>
 
+        <!-- Experience -->
+        <SectionWrapper id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div v-for="exp in experiences" :key="exp.id" class="timeline-item">
+                    <div class="timeline-dot" :class="{ 'timeline-dot--past': !exp.current }"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <p class="timeline-degree">{{ exp.role }}</p>
+                                <a
+                                    :href="exp.orgUrl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="timeline-institution timeline-org-link"
+                                >{{ exp.organization }}</a>
+                            </div>
+                            <span class="timeline-date">{{ exp.period }}</span>
+                        </div>
+                        <p class="timeline-description">{{ exp.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </SectionWrapper>
+
         <!-- Projects -->
         <SectionWrapper id="projects">
             <h2>Projects</h2>
@@ -140,28 +165,15 @@
         <SectionWrapper id="education">
             <h2>Education</h2>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                <div v-for="edu in education" :key="edu.id" class="timeline-item">
+                    <div class="timeline-dot" :class="{ 'timeline-dot--past': !edu.current }"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
-                                <p class="timeline-degree">Bachelor's degree in Computer Engineering</p>
-                                <p class="timeline-institution">Universidade do Minho</p>
+                                <p class="timeline-degree">{{ edu.degree }}</p>
+                                <p class="timeline-institution">{{ edu.institution }}</p>
                             </div>
-                            <span class="timeline-date">2023 - ongoing</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot timeline-dot--past"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <p class="timeline-degree">Secondary Education: Science and Technology</p>
-                                <p class="timeline-institution">Escola Secundária Francisco de Holanda</p>
-                            </div>
-                            <span class="timeline-date">2020 - 2023</span>
+                            <span class="timeline-date">{{ edu.period }}</span>
                         </div>
                     </div>
                 </div>
@@ -267,6 +279,8 @@ import SectionWrapper from "../components/SectionWrapper.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 import { projects } from "../data/projects.js";
 import { skillGroups } from "../data/skills.js";
+import { experiences } from "../data/experience.js";
+import { education } from "../data/education.js";
 </script>
 
 
@@ -479,6 +493,25 @@ h2 {
     border-radius: var(--radius-pill);
     border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
     align-self: flex-start;
+}
+
+/* Experience-specific extensions */
+.timeline-org-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.timeline-org-link:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.timeline-description {
+    font-size: 0.875rem;
+    color: var(--color-text-subtle);
+    line-height: 1.65;
+    margin: 0.75rem 0 0 0;
 }
 
 .contact-link {
