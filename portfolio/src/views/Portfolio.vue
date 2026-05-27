@@ -1,7 +1,8 @@
 <template>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <Navbar />
 
-    <main class="content">
+    <main id="main-content" class="content" aria-label="Portfolio content">
         <!-- Hero -->
         <SectionWrapper id="home">
             <div class="hero">
@@ -251,12 +252,12 @@ import { projects } from "../data/projects.js";
 .hero-text h2 {
     font-size: 1.25rem;
     font-weight: 500;
-    color: #444;
+    color: var(--color-text-sub);
     margin-bottom: 1rem;
 }
 
 .hero-text p {
-    color: #555;
+    color: var(--color-text-muted);
     max-width: 520px;
 }
 
@@ -269,8 +270,8 @@ import { projects } from "../data/projects.js";
     height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 4px solid var(--color-surface);
+    box-shadow: var(--shadow-lg);
 }
 
 h1 {
@@ -288,7 +289,7 @@ h2 {
 }
 
 .contact-link {
-    color: #42b883;
+    color: var(--color-accent);
     font-size: 1.1rem;
 }
 
@@ -310,7 +311,7 @@ h2 {
 }
 
 .hero-links a {
-    color: #42b883;
+    color: var(--color-accent);
     text-decoration: none;
     font-weight: 500;
 
@@ -331,10 +332,10 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #444;
+    color: var(--color-text-sub);
     transition:
         transform 0.25s ease,
-        color 0.25s easesvg;
+        color 0.25s ease;
 }
 
 .icon-link svg {
@@ -345,7 +346,7 @@ h2 {
 
 /* Hover animation */
 .icon-link:hover {
-    color: #42b883;
+    color: var(--color-accent);
     transform: translateY(-4px);
 }
 
@@ -359,11 +360,11 @@ h2 {
     bottom: -2.2rem;
     left: 50%;
     transform: translateX(-50%);
-    background: #222;
-    color: white;
+    background: var(--color-tooltip-bg);
+    color: var(--color-surface);
     font-size: 0.75rem;
     padding: 0.35rem 0.6rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
@@ -385,11 +386,11 @@ h2 {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #fff;
+    background-color: var(--color-surface);
     padding: 1rem 1.2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    flex: 1 1 280px; /* responsive */
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    flex: 1 1 280px;
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
@@ -397,13 +398,13 @@ h2 {
 
 .contact-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
 }
 
 .contact-icon {
     width: 36px;
     height: 36px;
-    fill: #42b883; /* accent color */
+    fill: var(--color-accent);
     flex-shrink: 0;
 }
 
@@ -413,14 +414,14 @@ h2 {
 }
 
 .contact-link {
-    color: #222;
+    color: var(--color-text);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.2s ease;
 }
 
 .contact-link:hover {
-    color: #42b883;
+    color: var(--color-accent);
     text-decoration: underline;
 }
 

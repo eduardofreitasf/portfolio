@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="logo">Eduardo Freitas Fernandes</div>
         <button class="menu-toggle" @click="isOpen = !isOpen" aria-label="Toggle menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -38,8 +38,8 @@ const isOpen = ref(false);
     position: fixed;
     top: 0;
     width: 100%;
-    background: white;
-    border-bottom: 1px solid #eee;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
     padding: 1.2rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -67,34 +67,34 @@ const isOpen = ref(false);
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-text-nav);
     font-weight: 500;
     padding: 0.35rem 0.5rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     transition:
         color 0.2s ease,
         background-color 0.2s ease;
 }
 
 .nav-links a:hover {
-    background-color: #f4f4f4;
-    color: #000;
+    background-color: var(--color-surface-alt);
+    color: var(--color-text);
 }
 
 /* CV Button */
 .cv-btn {
     padding: 0.45rem 0.9rem;
-    border: 1px solid #42b883;
-    border-radius: 999px;
-    color: #42b883;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-pill);
+    color: var(--color-accent);
     font-weight: 600;
     transition: all 0.25s ease;
     background: transparent;
 }
 
 .cv-btn:hover {
-    background: #42b883;
-    color: white;
+    background: var(--color-accent);
+    color: var(--color-surface);
     transform: translateY(-1px);
 }
 
@@ -104,7 +104,7 @@ const isOpen = ref(false);
     background: none;
     border: none;
     cursor: pointer;
-    color: #333;
+    color: var(--color-text-nav);
     padding: 0.5rem;
 }
 
@@ -125,10 +125,10 @@ const isOpen = ref(false);
         position: absolute;
         top: 100%;
         left: 0;
-        background: white;
-        border-bottom: 1px solid #eee;
+        background: var(--color-surface);
+        border-bottom: 1px solid var(--color-border);
         padding: 1rem 0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-menu);
     }
 
     .nav-links.is-open {

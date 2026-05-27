@@ -22,9 +22,9 @@ defineProps({
 <style scoped>
 .card {
     padding: 1.5rem;
-    border-radius: 8px;
-    background: #fff;
-    border: 1px solid #eaeaea;
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     transition: transform 0.2s ease;
 }
 
@@ -34,7 +34,7 @@ defineProps({
 
 .tech {
     font-size: 0.85rem;
-    color: #666;
+    color: var(--color-text-subtle);
 }
 
 .links {
@@ -43,6 +43,6 @@ defineProps({
 
 .links a {
     margin-right: 1rem;
-    color: #42b883;
+    color: var(--color-accent);
 }
 </style>
