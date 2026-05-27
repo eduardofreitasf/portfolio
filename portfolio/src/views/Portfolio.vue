@@ -121,16 +121,33 @@
         <!-- Education -->
         <SectionWrapper id="education">
             <h2>Education</h2>
-            <p>
-                <strong
-                    >Secondary Education: Science and Technology Program</strong
-                ><br />
-                Escola Secundária Francisco de Holanda - 2020-2023
-            </p>
-            <p>
-                <strong>Bachelor's degree in Computer Engineering</strong><br />
-                Universidade do Minho - 2023-on going
-            </p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <p class="timeline-degree">Bachelor's degree in Computer Engineering</p>
+                                <p class="timeline-institution">Universidade do Minho</p>
+                            </div>
+                            <span class="timeline-date">2023 - ongoing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot timeline-dot--past"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <p class="timeline-degree">Secondary Education: Science and Technology</p>
+                                <p class="timeline-institution">Escola Secundária Francisco de Holanda</p>
+                            </div>
+                            <span class="timeline-date">2020 - 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </SectionWrapper>
 
         <!-- Contact -->
@@ -286,6 +303,87 @@ h2 {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Education Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 2rem 1.75rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -0.55rem;
+    top: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: 2px solid var(--color-surface);
+    box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.timeline-dot--past {
+    background: var(--color-border);
+    box-shadow: 0 0 0 2px var(--color-border);
+}
+
+.timeline-content {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.timeline-content:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.timeline-degree {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin: 0 0 0.25rem 0;
+}
+
+.timeline-institution {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    white-space: nowrap;
+    padding: 0.2rem 0.6rem;
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    border-radius: var(--radius-pill);
+    border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+    align-self: flex-start;
 }
 
 .contact-link {
