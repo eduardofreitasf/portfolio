@@ -1,6 +1,9 @@
 <template>
     <nav class="navbar" aria-label="Main navigation">
-        <div class="logo">Eduardo Freitas Fernandes</div>
+        <div class="logo">
+            <span class="logo-full">Eduardo Freitas Fernandes</span>
+            <span class="logo-short">Eduardo Fernandes</span>
+        </div>
         <button class="menu-toggle" @click="isOpen = !isOpen" aria-label="Toggle menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path v-if="!isOpen" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -57,6 +60,10 @@ const isOpen = ref(false);
     white-space: nowrap;
 }
 
+.logo-short {
+    display: none;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -64,7 +71,6 @@ const isOpen = ref(false);
     gap: 1.2rem;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -115,7 +121,17 @@ const isOpen = ref(false);
     height: 24px;
 }
 
-@media (max-width: 768px) {
+/* Responsive Rules */
+@media (max-width: 1024px) {
+    .logo-full {
+        display: none;
+    }
+    .logo-short {
+        display: inline;
+    }
+}
+
+@media (max-width: 1024px) {
     .menu-toggle {
         display: block;
     }
@@ -148,3 +164,4 @@ const isOpen = ref(false);
     }
 }
 </style>
+
