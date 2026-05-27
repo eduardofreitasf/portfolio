@@ -4,28 +4,23 @@
             <span class="logo-full">Eduardo Freitas Fernandes</span>
             <span class="logo-short">Eduardo Fernandes</span>
         </div>
+
         <button class="menu-toggle" @click="isOpen = !isOpen" aria-label="Toggle menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path v-if="!isOpen" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 <path v-else stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
+
         <ul class="nav-links" :class="{ 'is-open': isOpen }">
-            <li><a href="#about" @click="isOpen = false">About</a></li>
-            <li><a href="#experience" @click="isOpen = false">Experience</a></li>
-            <li><a href="#projects" @click="isOpen = false">Projects</a></li>
-            <li><a href="#skills" @click="isOpen = false">Skills</a></li>
-            <li><a href="#education" @click="isOpen = false">Education</a></li>
-            <li><a href="#contact" @click="isOpen = false">Contacts</a></li>
+            <li><a href="#about"      @click="isOpen = false" :class="{ 'is-active': activeSection === 'about' }">About</a></li>
+            <li><a href="#experience" @click="isOpen = false" :class="{ 'is-active': activeSection === 'experience' }">Experience</a></li>
+            <li><a href="#projects"   @click="isOpen = false" :class="{ 'is-active': activeSection === 'projects' }">Projects</a></li>
+            <li><a href="#skills"     @click="isOpen = false" :class="{ 'is-active': activeSection === 'skills' }">Skills</a></li>
+            <li><a href="#education"  @click="isOpen = false" :class="{ 'is-active': activeSection === 'education' }">Education</a></li>
+            <li><a href="#contact"    @click="isOpen = false" :class="{ 'is-active': activeSection === 'contact' }">Contacts</a></li>
             <li>
-                <a
-                    href="/portfolio/cv.pdf"
-                    class="cv-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    @click="isOpen = false"
-                    >CV</a
-                >
+                <a href="/portfolio/cv.pdf" class="cv-btn" target="_blank" rel="noopener noreferrer" @click="isOpen = false">CV</a>
             </li>
         </ul>
     </nav>
@@ -33,10 +28,14 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useScrollSpy } from '../composables/useScrollSpy.js';
 
 const isOpen = ref(false);
-</script>
 
+const { activeSection } = useScrollSpy(
+    ['about', 'experience', 'projects', 'skills', 'education', 'contact']
+);
+</script>
 
 <style scoped>
 .navbar {
@@ -89,6 +88,13 @@ const isOpen = ref(false);
     color: var(--color-text);
 }
 
+/* Active link (scrollspy) */
+.nav-links a.is-active {
+    color: var(--color-accent);
+    background-color: color-mix(in srgb, var(--color-accent) 8%, transparent);
+    font-weight: 600;
+}
+
 /* CV Button */
 .cv-btn {
     padding: 0.45rem 0.9rem;
@@ -104,6 +110,12 @@ const isOpen = ref(false);
     background: var(--color-accent);
     color: var(--color-surface);
     transform: translateY(-1px);
+}
+
+/* cv-btn should never show the active indicator */
+.cv-btn.is-active {
+    background: var(--color-accent);
+    color: var(--color-surface);
 }
 
 /* Menu Toggle Button */
@@ -123,15 +135,9 @@ const isOpen = ref(false);
 
 /* Responsive Rules */
 @media (max-width: 1024px) {
-    .logo-full {
-        display: none;
-    }
-    .logo-short {
-        display: inline;
-    }
-}
+    .logo-full { display: none; }
+    .logo-short { display: inline; }
 
-@media (max-width: 1024px) {
     .menu-toggle {
         display: block;
     }
@@ -164,4 +170,3 @@ const isOpen = ref(false);
     }
 }
 </style>
-
