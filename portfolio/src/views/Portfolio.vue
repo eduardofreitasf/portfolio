@@ -1,17 +1,17 @@
 <template>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <Navbar />
-    <ThemeToggle />
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <Navbar />
+  <ThemeToggle />
 
-    <main id="main-content" class="content" aria-label="Portfolio content">
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <EducationSection />
-        <ContactSection />
-    </main>
+  <main id="main-content" class="content" aria-label="Portfolio content">
+    <HeroSection />
+    <AboutSection />
+    <ExperienceSection />
+    <ProjectsSection />
+    <SkillsSection />
+    <EducationSection />
+    <ContactSection />
+  </main>
 </template>
 
 <script setup>
@@ -28,10 +28,10 @@ import ContactSection from "../components/sections/ContactSection.vue";
 
 <style scoped>
 .content {
-    padding-top: 80px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  padding-top: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 </style>
