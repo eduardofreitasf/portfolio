@@ -20,4 +20,11 @@ export const projects = [
     tech: ["C"],
     github: "https://github.com/eduardofreitasf/data_structures",
   },
+  {
+    id: 4,
+    title: "Mechanic Pro",
+    description: "Management system for a mechanic shop.",
+    tech: ["TypeScript", "React", "Rust"],
+    github: "https://github.com/eduardofreitasf/mechanic_shop",
+  },
 ];
