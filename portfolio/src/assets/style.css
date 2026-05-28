@@ -2,81 +2,82 @@
    Design Tokens
    ========================================= */
 :root {
-    /* Colors */
-    --color-accent:      #42b883;
-    --color-accent-dark: #369d6e;
+  /* Colors */
+  --color-accent: #42b883;
+  --color-accent-dark: #369d6e;
 
-    --color-bg:          #f5f5f7;
-    --color-surface:     #ffffff;
-    --color-surface-alt: #f4f4f4;
+  --color-bg: #f5f5f7;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f4f4;
 
-    --color-text:        #222222;
-    --color-text-muted:  #555555;
-    --color-text-subtle: #666666;
-    --color-text-nav:    #333333;
-    --color-text-sub:    #444444;
+  --color-text: #222222;
+  --color-text-muted: #555555;
+  --color-text-subtle: #666666;
+  --color-text-nav: #333333;
+  --color-text-sub: #444444;
 
-    --color-border:      #eaeaea;
-    --color-border-nav:  #cccccc;
+  --color-border: #eaeaea;
+  --color-border-nav: #cccccc;
 
-    --color-tooltip-bg:  #222222;
+  --color-tooltip-bg: #222222;
 
-    /* Shadows */
-    --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.05);
-    --shadow-md:   0 4px 12px rgba(0, 0, 0, 0.10);
-    --shadow-lg:   0 8px 24px rgba(0, 0, 0, 0.12);
-    --shadow-nav:  0 2px 6px rgba(0, 0, 0, 0.05);
-    --shadow-menu: 0 4px 6px -1px rgba(0, 0, 0, 0.10);
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-nav: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-menu: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 
-    /* Spacing */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-pill: 999px;
+  /* Spacing */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-pill: 999px;
 
-    /* Typography */
-    --font-base: system-ui, sans-serif;
+  /* Typography */
+  --font-base: system-ui, sans-serif;
 }
 
 /* =========================================
    Dark Mode Token Overrides
    ========================================= */
 [data-theme="dark"] {
-    --color-bg:          #0f1117;
-    --color-surface:     #1a1d27;
-    --color-surface-alt: #22263a;
+  --color-bg: #0f1117;
+  --color-surface: #1a1d27;
+  --color-surface-alt: #22263a;
 
-    --color-text:        #e8eaf0;
-    --color-text-muted:  #a0a8c0;
-    --color-text-subtle: #8892aa;
-    --color-text-nav:    #c8d0e0;
-    --color-text-sub:    #b0b8cc;
+  --color-text: #e8eaf0;
+  --color-text-muted: #a0a8c0;
+  --color-text-subtle: #8892aa;
+  --color-text-nav: #c8d0e0;
+  --color-text-sub: #b0b8cc;
 
-    --color-border:      #2a2f42;
-    --color-border-nav:  #2a2f42;
+  --color-border: #2a2f42;
+  --color-border-nav: #2a2f42;
 
-    --color-tooltip-bg:  #e8eaf0;
+  --color-tooltip-bg: #e8eaf0;
 
-    --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md:   0 4px 12px rgba(0, 0, 0, 0.4);
-    --shadow-lg:   0 8px 24px rgba(0, 0, 0, 0.5);
-    --shadow-nav:  0 2px 6px rgba(0, 0, 0, 0.3);
-    --shadow-menu: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-nav: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-menu: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
 }
-
 
 /* =========================================
    Global Reset & Base
    ========================================= */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: var(--font-base);
-    background: var(--color-bg);
-    color: var(--color-text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* =========================================
@@ -85,164 +86,163 @@ body {
 
 /* Skip-to-content link (screen readers & keyboard users) */
 .skip-link {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    background: var(--color-accent);
-    color: var(--color-surface);
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    z-index: 9999;
-    text-decoration: none;
-    border-radius: 0 0 var(--radius-md) 0;
-    transition: top 0.2s;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-accent);
+  color: var(--color-surface);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-md) 0;
+  transition: top 0.2s;
 }
 
 .skip-link:focus {
-    top: 0;
+  top: 0;
 }
 
 /* Visible focus ring for keyboard navigation */
 *:focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 3px;
-    border-radius: var(--radius-sm);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
 }
 
 /* Remove default focus ring for mouse users */
 *:focus:not(:focus-visible) {
-    outline: none;
+  outline: none;
 }
 
 /* Respect user's motion preference */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* =========================================
    Layout
    ========================================= */
 .section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
-    background-color: var(--color-surface);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
 }
 
 .navbar {
-    background-color: var(--color-surface-alt);
-    border-bottom: 1px solid var(--color-border-nav);
-    box-shadow: var(--shadow-nav);
+  background-color: var(--color-surface-alt);
+  border-bottom: 1px solid var(--color-border-nav);
+  box-shadow: var(--shadow-nav);
 }
 
 /* =========================================
    Timeline Component Styles
    ========================================= */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 1.5rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-border);
 }
 
 .timeline-item {
-    position: relative;
-    padding: 0 0 2rem 1.75rem;
+  position: relative;
+  padding: 0 0 2rem 1.75rem;
 }
 
 .timeline-item:last-child {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .timeline-dot {
-    position: absolute;
-    left: -0.55rem;
-    top: 0.25rem;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background: var(--color-accent);
-    border: 2px solid var(--color-surface);
-    box-shadow: 0 0 0 2px var(--color-accent);
+  position: absolute;
+  left: -0.55rem;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 2px solid var(--color-surface);
+  box-shadow: 0 0 0 2px var(--color-accent);
 }
 
 .timeline-dot--past {
-    background: var(--color-border);
-    box-shadow: 0 0 0 2px var(--color-border);
+  background: var(--color-border);
+  box-shadow: 0 0 0 2px var(--color-border);
 }
 
 .timeline-content {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: 1rem 1.25rem;
-    transition: box-shadow 0.2s ease;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  transition: box-shadow 0.2s ease;
 }
 
 .timeline-content:hover {
-    box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .timeline-degree {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--color-text);
-    margin: 0 0 0.25rem 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 0 0 0.25rem 0;
 }
 
 .timeline-institution {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-    margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
 .timeline-date {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    white-space: nowrap;
-    padding: 0.2rem 0.6rem;
-    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
-    border-radius: var(--radius-pill);
-    border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
-    align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  white-space: nowrap;
+  padding: 0.2rem 0.6rem;
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-radius: var(--radius-pill);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+  align-self: flex-start;
 }
 
 .timeline-org-link {
-    display: inline-block;
-    text-decoration: none;
-    transition: color 0.15s ease;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 .timeline-org-link:hover {
-    color: var(--color-accent);
-    text-decoration: underline;
+  color: var(--color-accent);
+  text-decoration: underline;
 }
 
 .timeline-description {
-    font-size: 0.875rem;
-    color: var(--color-text-subtle);
-    line-height: 1.65;
-    margin: 0.75rem 0 0 0;
+  font-size: 0.875rem;
+  color: var(--color-text-subtle);
+  line-height: 1.65;
+  margin: 0.75rem 0 0 0;
 }
-
