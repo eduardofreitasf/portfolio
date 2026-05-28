@@ -31,7 +31,6 @@ import { ref } from 'vue';
 import { useScrollSpy } from '../composables/useScrollSpy.js';
 
 const isOpen = ref(false);
-
 const { activeSection } = useScrollSpy(
     ['about', 'experience', 'projects', 'skills', 'education', 'contact']
 );
@@ -61,6 +60,38 @@ const { activeSection } = useScrollSpy(
 
 .logo-short {
     display: none;
+}
+
+/* Right-side group: theme toggle + hamburger */
+.navbar-end {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-nav);
+    border-radius: var(--radius-sm);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 0;
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-toggle:hover {
+    color: var(--color-accent);
+    background-color: var(--color-surface-alt);
 }
 
 .nav-links {

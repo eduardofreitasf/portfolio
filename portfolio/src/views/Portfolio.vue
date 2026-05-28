@@ -1,6 +1,7 @@
 <template>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <Navbar />
+    <ThemeToggle />
 
     <main id="main-content" class="content" aria-label="Portfolio content">
         <HeroSection />
@@ -15,6 +16,7 @@
 
 <script setup>
 import Navbar from "../components/Navbar.vue";
+import ThemeToggle from "../components/ThemeToggle.vue";
 import HeroSection from "../components/sections/HeroSection.vue";
 import AboutSection from "../components/sections/AboutSection.vue";
 import ExperienceSection from "../components/sections/ExperienceSection.vue";
