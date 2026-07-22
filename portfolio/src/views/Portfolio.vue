@@ -9,6 +9,7 @@
     <ExperienceSection />
     <ProjectsSection />
     <SkillsSection />
+    <CertificationsSection />
     <EducationSection />
     <ContactSection />
   </main>
@@ -22,6 +23,7 @@ import AboutSection from "../components/sections/AboutSection.vue";
 import ExperienceSection from "../components/sections/ExperienceSection.vue";
 import ProjectsSection from "../components/sections/ProjectsSection.vue";
 import SkillsSection from "../components/sections/SkillsSection.vue";
+import CertificationsSection from "../components/sections/CertificationsSection.vue";
 import EducationSection from "../components/sections/EducationSection.vue";
 import ContactSection from "../components/sections/ContactSection.vue";
 </script>

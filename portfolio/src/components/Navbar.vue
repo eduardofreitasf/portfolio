@@ -66,6 +66,14 @@
       </li>
       <li>
         <a
+          href="#certifications"
+          @click="isOpen = false"
+          :class="{ 'is-active': activeSection === 'certifications' }"
+          >Certifications</a
+        >
+      </li>
+      <li>
+        <a
           href="#education"
           @click="isOpen = false"
           :class="{ 'is-active': activeSection === 'education' }"
@@ -104,6 +112,7 @@ const { activeSection } = useScrollSpy([
   "experience",
   "projects",
   "skills",
+  "certifications",
   "education",
   "contact",
 ]);
