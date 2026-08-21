@@ -62,7 +62,7 @@
       <!-- Photo -->
       <div class="hero-image">
         <div class="hero-image-ring">
-          <img src="/me.jpeg" alt="Photo of Eduardo Freitas Fernandes" />
+          <img src="/me.png" alt="Photo of Eduardo Freitas Fernandes" />
         </div>
       </div>
     </div>
